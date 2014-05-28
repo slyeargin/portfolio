@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Memory
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css')
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css')
+    link(rel='stylesheet', href='/css/memory.css')
+  body
+    h1 Memoré
+
+    .pure-g
+      .pure-u-1
+        #controls
+          button#start Start
+          #clock(data-time=90) 90
+
+    .pure-g
+      .pure-u-1
+        table#game.pure-table.pure-table-bordered
+          tbody
+            - for (var i = 0; i < 4; i++)
+              tr
+                - for (var j = 0; j < 5; j++)
+                  td.card
+                    .flipper
+                      .front
+                      .back
+
+    script(src='/js/vendor/jquery-2.1.0.js')
+    script(src='/js/es5/memory.js')

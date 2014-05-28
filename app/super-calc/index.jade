@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Super Calculator
+    link(rel='stylesheet', href='/css/super-calc.css')
+  body
+    h1#title Super Calculator
+
+    div#calculator
+
+      table
+        tbody
+          tr
+            td#display(colspan=5) 0
+          tr
+            td.number.button 7
+            td.number.button 8
+            td.number.button 9
+            td.operator.button(data-op='add') +
+            td.operator.button(data-op='sum') ∑
+          tr
+            td.number.button 4
+            td.number.button 5
+            td.number.button 6
+            td.operator.button(data-op='sub') -
+            td.operator.button(data-op='exp') x<sup>y</sup>
+          tr
+            td.number.button 1
+            td.number.button 2
+            td.number.button 3
+            td.operator.button(data-op='mul') x
+            td.operator.button(data-op='root') √
+          tr
+            td.number.button 0
+            td.decimal.button .
+            td.toggle.button ±
+            td.operator.button(data-op='div') ÷
+            td.operator.button(data-op='fact') !
+          tr
+            td.clear.button X
+            td.clear.button C
+            td
+            td.button#push(colspan=2) Push
+
+      #queue
+
+    script(src='/js/vendor/jquery-2.1.0.js')
+    script(src='/js/es5/super-calc.js')

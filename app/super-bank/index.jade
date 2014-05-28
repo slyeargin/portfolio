@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Super Bank
+    link(rel='stylesheet', href='/css/super-bank.css')
+  body
+    #container
+      h1 Super Bank
+
+      #display Balance:
+        span#balance $1000.00
+
+      #input
+        input#amount(type='text', placeholder='Enter amount.')
+        button.btn(data-op='deposit') Deposit
+        button.btn(data-op='withdraw') Withdraw
+
+      #ledger
+        table
+          thead
+            th Fee
+            th Deposit
+            th Withdrawal
+            th Balance
+          tbody
+            td
+            td
+            td
+            td $1000.00
+
+      #alertbox
+
+      script(src='/js/vendor/jquery-2.1.0.js')
+      script(src='/js/es5/super-bank.js')
